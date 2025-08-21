@@ -52,6 +52,11 @@ SolicitudUsuario.init({
     type: DataTypes.STRING(150),
     allowNull: true,
   },
+  estado: {
+    type: DataTypes.ENUM('exito', 'proceso', 'error'),
+    allowNull: false,
+    defaultValue: 'proceso'
+  },
 }, {
   sequelize,
   modelName: 'SolicitudUsuario',
